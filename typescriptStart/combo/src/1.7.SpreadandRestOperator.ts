@@ -1,37 +1,39 @@
-{
-    //spread operator
-    //rest operator
-    //destructuring
+// Demonstrating Spread and Rest Operators, and Destructuring in TypeScript
 
+// Spread Operator
+const friends: string[] = ['Ashik', 'Tommy', 'Poline'];
+const friends2: string[] = ['Piku1', 'Piku2', 'Piku3'];
 
-    //learn spread operator
-    const friends: string[] = ['ashik', 'tommy', 'poline'];
-    const friends2: string[] = ['piku1', 'piku2','piku3'];
-    friends.push(...friends2)
+// Merging two arrays using spread operator
+friends.push(...friends2);
+console.log('Combined Friends List:', friends); // Output combined friends
 
-    const mentors = {
-        typeScripts: "Mosh",
-        reduX: "Anisul haque",
-        dbms: 'Bro code'
-    }
+// Merging two objects using spread operator
+const mentors = {
+    typeScript: "Mosh",
+    redux: "Anisul Haque",
+    dbms: 'Bro Code'
+};
 
-    const mentors2 ={
-        prisma: 'herry',
-        next: 'mosh',
-        cloud: 'Harish'
-    }
+const mentors2 = {
+    prisma: 'Herry',
+    next: 'Mosh',
+    cloud: 'Harish'
+};
 
-    const mentorList = {
-        ...mentors,
-        ...mentors2
-    }
-  
-    // learn rest operator
+// Creating a new object with properties from both mentors
+const mentorList = {
+    ...mentors,
+    ...mentors2
+};
 
-    const myFriends = (...fin: string[])=> {
-       // console.log(`Hello ${fin1}, ${fin2}, ${fin3}`);
-       fin.forEach((f:string)=>console.log(`Hi ${f}`))
-    }
-    myFriends('mikel',"leao", 'Trumnp')
+console.log('Mentor List:', mentorList); // Output merged mentor list
 
- }
+// Rest Operator
+const myFriends = (...friends: string[]) => {
+    // Greeting each friend using the rest parameter
+    friends.forEach((friend: string) => console.log(`Hi ${friend}`));
+};
+
+// Calling the function with multiple friend names
+myFriends('Mikel', 'Leao', 'Trump');
