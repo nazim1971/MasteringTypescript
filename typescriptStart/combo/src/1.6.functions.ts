@@ -1,5 +1,6 @@
 // Normal function declaration
-function add(num1: number, num2: number): number {
+{
+    function add(num1: number, num2: number): number {
     return num1 + num2;
 }
 
@@ -24,3 +25,4 @@ const arr: number[] = [1, 5, 7, 10];
 
 // Using map function to square each element of the array
 const newArr: number[] = arr.map((e: number): number => e * e);
+}
