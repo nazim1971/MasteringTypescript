@@ -1,4 +1,5 @@
-// TypeScript example with good practices
+{
+    // TypeScript example with good practices
 
 // Define a type for Student with optional contact number
 type Student = {
@@ -42,3 +43,5 @@ const add: Add = (num1, num2) => num1 + num2;
 
 // Example usage of the add function
 console.log(add(10, 5)); // Output: 15
+
+}

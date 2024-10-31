@@ -1,4 +1,5 @@
-//
+{
+    //
 // Union Types
 
 // Using union type for specifying FrontEndDeveloper levels
@@ -46,3 +47,5 @@ const fullstackDeveloper: FullStackDeveloper = {
 
 
 //
+
+}

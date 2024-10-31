@@ -1,4 +1,5 @@
-// Demonstrating Spread and Rest Operators, and Destructuring in TypeScript
+{
+    // Demonstrating Spread and Rest Operators, and Destructuring in TypeScript
 
 // Spread Operator
 const friends: string[] = ['Ashik', 'Tommy', 'Poline'];
@@ -37,3 +38,5 @@ const myFriends = (...friends: string[]) => {
 
 // Calling the function with multiple friend names
 myFriends('Mikel', 'Leao', 'Trump');
+
+}

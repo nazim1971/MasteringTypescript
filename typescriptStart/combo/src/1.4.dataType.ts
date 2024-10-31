@@ -1,4 +1,5 @@
-// Basic Data Types
+{
+    // Basic Data Types
 
 // String type
 let myName: string = "Nazim";
@@ -29,3 +30,5 @@ eligibleRollList.push(12); // Using the `push` method to add values
 // Tuple type: fixed-size array with specified types
 let coordinates: [number, number] = [1, 7]; // Represents a point in 2D space (x, y)
 let ageName: [number, string, boolean] = [50, "Mr. Nazim", true]; // Tuple for age, name, and a boolean flag
+
+}
