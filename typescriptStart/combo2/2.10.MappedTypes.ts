@@ -1,32 +1,29 @@
 {
-    //mapped types
+    // Mapped types example
 
-    const arrOfNumbers : number [] = [1,4,6];
+const arrOfNumbers: number[] = [1, 4, 6];
+const arrOfString = arrOfNumbers.map((number) => number.toString());
+console.log(arrOfString);
 
-    const arrOfString : string[] = arrOfNumbers.map((number)=> number.toString());
+type Area = {
+  height: number;
+  width: number;
+};
 
-    console.log(arrOfString);
+// Lookup type to extract the type of a property
+type Height = Area["height"];
 
-    type Area= {
-        height: number;
-        width: number;
-    };
+// Mapped type to transform or maintain types
+type AreaString<T extends Record<string, any>> = {
+  [i in keyof T]: string; // In this case, transforming all properties to string
+};
 
-    // type AreaString= {
-    //     height: string;
-    //     width: string;
-    // }
-    
-    type Height = Area["height"] // lookup type
+// Example usage:
+const area1: AreaString<Area> = {
+  height: '400',
+  width: '300',
+};
 
-    type AreaString <T> = {
-        [i in keyof T] : T[i]
-    };
+console.log(area1);
 
-    const area1 : AreaString <{height: string; width: number}> ={
-        height: '400',
-        width: 300
-    }
-
-    //
 }
